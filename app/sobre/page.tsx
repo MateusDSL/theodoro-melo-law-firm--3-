@@ -1,3 +1,6 @@
+"use client"
+
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Target, Eye, Heart, Shield, Clock, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -28,9 +31,12 @@ export default function SobrePage() {
                 Nossa História
               </div>
               <h1 className="text-4xl lg:text-6xl font-motiva font-bold text-white mb-6 animate-fade-in [animation-delay:0.2s] [animation-fill-mode:backwards]">
-                Sobre <span className="text-slate-300">Nós</span>
+                Sobre <span style={{ color: "#F1AF09" }}>Nós</span>
               </h1>
-              <div className="w-24 h-1 bg-gradient-to-r from-slate-400 to-slate-500 mb-8 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]"></div>
+              <div
+                className="w-24 h-1 mb-8 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]"
+                style={{ background: "#F1AF09" }}
+              ></div>
               <p className="text-xl text-white/80 leading-relaxed max-w-3xl animate-fade-in-left [animation-delay:0.4s] [animation-fill-mode:backwards]">
                 Construindo relacionamentos sólidos e oferecendo soluções jurídicas de excelência há mais de 15 anos
               </p>
@@ -57,9 +63,12 @@ export default function SobrePage() {
                     Nossa Trajetória
                   </div>
                   <h2 className="text-3xl lg:text-4xl font-motiva font-bold text-slate-900 mb-6 leading-tight">
-                    Tradição e Inovação <span className="text-slate-700">Jurídica</span>
+                    Tradição e Inovação <span style={{ color: "#F1AF09" }}>Jurídica</span>
                   </h2>
-                  <div className="w-16 h-1 bg-gradient-to-r from-slate-500 to-slate-600 mb-8"></div>
+                  <div
+                    className="w-16 h-1 mb-8"
+                    style={{ background: "#F1AF09" }}
+                  ></div>
                 </div>
 
                 <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
@@ -143,9 +152,12 @@ export default function SobrePage() {
               Nossos Princípios
             </div>
             <h2 className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4">
-              Valores que <span className="text-slate-700">Nos Definem</span>
+              Valores que <span style={{ color: "#F1AF09" }}>Nos Definem</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-slate-500 to-slate-600 mx-auto mb-8"></div>
+            <div
+              className="w-24 h-1 mx-auto mb-8"
+              style={{ background: "#F1AF09" }}
+            ></div>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Os princípios que norteiam nossa atuação e definem nossa identidade profissional
             </p>

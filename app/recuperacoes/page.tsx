@@ -126,9 +126,12 @@ export default function RecuperacoesPage() {
               Especialização Empresarial
             </div>
             <h1 className="text-4xl lg:text-6xl font-motiva font-bold text-white mb-6 animate-fade-in [animation-delay:0.2s] [animation-fill-mode:backwards]">
-              Recuperações e <span className="text-slate-300">Falências</span>
+              Recuperações e <span style={{ color: "#F1AF09" }}>Falências</span>
             </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-slate-400 to-slate-500 mx-auto mb-8 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]"></div>
+            <div
+              className="w-24 h-1 mx-auto mb-8 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]"
+              style={{ background: "#F1AF09" }}
+            ></div>
             <p className="text-xl text-white/80 leading-relaxed animate-fade-in [animation-delay:0.4s] [animation-fill-mode:backwards]">
               Especialistas em recuperação judicial, extrajudicial e processos falimentares com soluções estratégicas
               para empresas em dificuldades financeiras
@@ -152,9 +155,12 @@ export default function RecuperacoesPage() {
               Nossos Serviços
             </div>
             <h2 className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4">
-              Soluções <span className="text-slate-700">Especializadas</span>
+              Soluções <span style={{ color: "#F1AF09" }}>Especializadas</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-slate-500 to-slate-600 mx-auto mb-8"></div>
+            <div
+              className="w-24 h-1 mx-auto mb-8"
+              style={{ background: "#F1AF09" }}
+            ></div>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Oferecemos assessoria completa em processos de recuperação e falência com abordagem estratégica e
               personalizada
@@ -177,7 +183,8 @@ export default function RecuperacoesPage() {
                   {/* Icon Container */}
                   <div className="relative mb-6">
                     <div
-                      className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg`}
+                      className={`w-16 h-16 mx-auto rounded-2xl flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg`}
+                      style={{ background: "#F1AF09" }}
                     >
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
@@ -190,13 +197,13 @@ export default function RecuperacoesPage() {
 
                   <div className="relative z-10">
                     <h4 className="text-sm font-semibold text-slate-900 mb-3 flex items-center justify-center gap-2">
-                      <Award className="w-4 h-4 text-slate-600" />
+                      <Award className="w-4 h-4" style={{ color: "#F1AF09" }} />
                       Principais Características
                     </h4>
                     <ul className="space-y-2 text-left">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start gap-2 text-slate-600 text-sm">
-                          <CheckCircle className="w-4 h-4 text-slate-600 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "#F1AF09" }} />
                           <span>{feature}</span>
                         </li>
                       ))}

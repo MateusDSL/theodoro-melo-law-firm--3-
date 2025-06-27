@@ -121,10 +121,15 @@ export default function EquipePage() {
               <Users className="w-4 h-4" />
               Nossos Profissionais
             </div>
-            <h1 className="text-4xl lg:text-6xl font-motiva font-bold text-white mb-6 animate-fade-in [animation-delay:0.2s] [animation-fill-mode:backwards]">
-              Nossa <span className="text-slate-300">Equipe</span>
+            <h1
+              className="text-4xl lg:text-6xl font-motiva font-bold text-white mb-6 animate-fade-in [animation-delay:0.2s] [animation-fill-mode:backwards]"
+            >
+              Nossa <span style={{ color: "#F1AF09" }}>Equipe</span>
             </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-slate-400 to-slate-500 mx-auto mb-8 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]"></div>
+            <div
+              className="w-24 h-1 mx-auto mb-8 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]"
+              style={{ background: "#F1AF09" }}
+            ></div>
             <p className="text-xl text-white/80 leading-relaxed animate-fade-in [animation-delay:0.4s] [animation-fill-mode:backwards]">
               Profissionais experientes e comprometidos com a excelência no atendimento e na busca pelos melhores
               resultados
@@ -145,10 +150,15 @@ export default function EquipePage() {
               <Target className="w-4 h-4" />
               Liderança
             </div>
-            <h2 className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4">
-              Sócios <span className="text-slate-600">Fundadores</span>
+            <h2
+              className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4"
+            >
+              Sócios <span style={{ color: "#F1AF09" }}>Fundadores</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-slate-500 to-slate-600 mx-auto mb-8"></div>
+            <div
+              className="w-24 h-1 mx-auto mb-8"
+              style={{ background: "#F1AF09" }}
+            ></div>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Liderança experiente e visão estratégica para oferecer as melhores soluções jurídicas
             </p>
@@ -278,10 +288,15 @@ export default function EquipePage() {
               <Users className="w-4 h-4" />
               Equipe Especializada
             </div>
-            <h2 className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4">
-              Nossa <span className="text-slate-600">Equipe</span>
+            <h2
+              className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4"
+            >
+              Nossa <span style={{ color: "#F1AF09" }}>Equipe</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-slate-500 to-slate-600 mx-auto mb-8"></div>
+            <div
+              className="w-24 h-1 mx-auto mb-8"
+              style={{ background: "#F1AF09" }}
+            ></div>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Profissionais qualificados que complementam nossa equipe com expertise especializada
             </p>
@@ -461,10 +476,15 @@ export default function EquipePage() {
               <Users className="w-4 h-4" />
               Nossa Força Coletiva
             </div>
-            <h2 className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4">
-              Nossa Equipe <span className="text-slate-600">Unida</span>
+            <h2
+              className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4"
+            >
+              Nossa Equipe <span style={{ color: "#F1AF09" }}>Unida</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-slate-500 to-slate-600 mx-auto mb-6"></div>
+            <div
+              className="w-24 h-1 mx-auto mb-6"
+              style={{ background: "#F1AF09" }}
+            ></div>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Juntos, combinamos expertise e paixão para alcançar os melhores resultados para você.
             </p>
