@@ -1,4 +1,5 @@
 "use client"
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Mail, Linkedin, GraduationCap, Award, Users, Target, CheckCircle, ArrowRight, Star } from "lucide-react"
@@ -6,8 +7,6 @@ import Link from "next/link"
 import Header from "@/components/header"
 import Image from "next/image"
 import Footer from "@/components/footer"
-import Flickity from 'react-flickity-component'
-import 'flickity/css/flickity.css'
 
 export default function EquipePage() {
   const team = [
@@ -29,7 +28,7 @@ export default function EquipePage() {
         "Autor de artigos especializados em compliance",
       ],
       email: "brian@theodoromelo.adv.br",
-      imageUrl: "/images/theodoro.webp ",
+      imageUrl: "/images/theodoro.webp",
       delay: 0,
     },
     {
@@ -104,18 +103,6 @@ export default function EquipePage() {
     },
   ]
 
-  // Configuração do Flickity
-  const flickityOptions = {
-    cellAlign: 'left',
-    contain: true,
-    pageDots: true,
-    prevNextButtons: true,
-    groupCells: 2,
-    autoPlay: 5000,
-    wrapAround: true,
-    draggable: true,
-  }
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -177,7 +164,7 @@ export default function EquipePage() {
                   <div className="grid lg:grid-cols-5 h-full">
                     <div className="lg:col-span-2 bg-gradient-to-br from-slate-800 to-slate-900 py-12 px-8 flex flex-col items-center relative overflow-hidden">
                       <div className="absolute inset-0 opacity-10 bg-grid-white/[0.2] bg-[length:15px_15px]"></div>
-                      <div className="w-56 h-56 mb-6 relative overflow-hidden flex items-center justify-center bg-slate-900 rounded-3xl group-hover/card:scale-105 transition-transform duration-500 shadow-2xl">
+                      <div className="w-72 h-72 mb-6 relative overflow-hidden flex items-center justify-center bg-slate-900 rounded-3xl group-hover/card:scale-105 transition-transform duration-500 shadow-2xl">
                         <Image
                           src={member.imageUrl}
                           alt={`Foto de ${member.name}`}
@@ -285,7 +272,7 @@ export default function EquipePage() {
       {/* Equipe de Apoio */}
       <section className="py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-slate/[0.02] bg-[length:30px_30px]"></div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 max-w-8xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-slate-100 text-slate-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Users className="w-4 h-4" />
@@ -299,96 +286,168 @@ export default function EquipePage() {
               Profissionais qualificados que complementam nossa equipe com expertise especializada
             </p>
           </div>
-          {/* Carrossel horizontal para os cards */}
-          <div className="relative max-w-7xl mx-auto">
-            <Flickity
-              className={'carousel !pb-12'} // default ''
-              elementType={'div'} // default 'div'
-              options={flickityOptions}
-              disableImagesLoaded={false} // default false
-              reloadOnUpdate
-              static
-            >
-              {associates.map((associate, index) => (
-                <div className="carousel-cell w-full md:w-1/2 px-2" key={index}>
-                  <Card
-                    className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-slide-up group overflow-visible h-full"
-                    style={{ animationDelay: `${associate.delay}s` }}
-                  >
-                    <CardContent className="p-6 flex flex-col h-full">
-                      <div className="text-center mb-6">
-                        <div className="w-40 h-40 mx-auto mb-4 relative overflow-hidden flex items-center justify-center bg-slate-200 rounded-2xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                          <Image
-                            src={associate.imageUrl || "/images/placeholder-avatar.png"}
-                            alt={`Foto de ${associate.name}`}
-                            fill
-                            style={{
-                              objectFit: "cover",
-                              objectPosition: "top center",
-                            }}
-                            className="rounded-2xl"
-                          />
-                        </div>
-                        <h3 className="text-xl font-motiva font-bold text-slate-900 mb-2">{associate.name}</h3>
-                        <p className="text-slate-600 font-medium mb-4">{associate.role}</p>
+          {/* Custom grid: 2 cards on top, 2 centered abaixo */}
+          <div className="flex flex-col items-center">
+            <div className="grid md:grid-cols-2 gap-8 w-full max-w-4xl mx-auto">
+              {associates.slice(0, 2).map((associate, index) => (
+                <Card
+                  key={index}
+                  className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-slide-up group overflow-hidden"
+                  style={{ animationDelay: `${associate.delay}s` }}
+                >
+                  <CardContent className="p-8 flex flex-col h-full">
+                    <div className="text-center mb-6">
+                      <div className="w-52 h-52 mx-auto mb-4 relative overflow-hidden flex items-center justify-center bg-slate-200 rounded-2xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <Image
+                          src={associate.imageUrl || "/images/placeholder-avatar.webp"}
+                          alt={`Foto de ${associate.name}`}
+                          fill
+                          style={{
+                            objectFit: "cover",
+                            objectPosition: "top center", // Foca mais no topo para evitar cortes no rosto
+                          }}
+                          className="rounded-2xl"
+                        />
                       </div>
-                      <div className="flex-grow">
-                        <div className="mb-6">
-                          <h4 className="font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                            <Target className="w-4 h-4 text-slate-600" />
-                            Especialidades
-                          </h4>
-                          <div className="flex flex-wrap gap-2 mb-4">
-                            {associate.specialties.map((specialty, specIndex) => (
-                              <span
-                                key={specIndex}
-                                className="bg-slate-100 text-slate-800 px-3 py-1 rounded-full text-sm font-medium"
-                              >
-                                {specialty}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                        <div className="mb-6">
-                          <h4 className="font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                            <GraduationCap className="w-4 h-4 text-slate-600" />
-                            Formação
-                          </h4>
-                          <p className="text-slate-600 text-sm leading-relaxed">{associate.education}</p>
-                        </div>
-                        <div className="mb-6 flex-grow">
-                          <h4 className="font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                            <Award className="w-4 h-4 text-slate-600" />
-                            Experiência
-                          </h4>
-                          <p className="text-slate-600 text-sm leading-relaxed mb-4">{associate.experience}</p>
-                          <ul className="space-y-1">
-                            {associate.achievements.map((achievement, achIndex) => (
-                              <li key={achIndex} className="flex items-start gap-2 text-slate-600">
-                                <CheckCircle className="w-3 h-3 text-slate-600 mt-1 flex-shrink-0" />
-                                <span className="text-xs">{achievement}</span>
-                              </li>
-                            ))}
-                          </ul>
+                      <h3 className="text-xl font-motiva font-bold text-slate-900 mb-2">{associate.name}</h3>
+                      <p className="text-slate-600 font-medium mb-4">{associate.role}</p>
+                    </div>
+                    <div className="flex-grow">
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                          <Target className="w-4 h-4 text-slate-600" />
+                          Especialidades
+                        </h4>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {associate.specialties.map((specialty, specIndex) => (
+                            <span
+                              key={specIndex}
+                              className="bg-slate-100 text-slate-800 px-3 py-1 rounded-full text-sm font-medium"
+                            >
+                              {specialty}
+                            </span>
+                          ))}
                         </div>
                       </div>
-                      <div className="mt-auto pt-4">
-                        <Button
-                          asChild
-                          variant="outline"
-                          className="w-full border-slate-300 text-slate-700 hover:bg-slate-50 transition-all duration-300"
-                        >
-                          <Link href="/contato" className="flex items-center justify-center gap-2">
-                            Entrar em Contato
-                            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                          </Link>
-                        </Button>
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                          <GraduationCap className="w-4 h-4 text-slate-600" />
+                          Formação
+                        </h4>
+                        <p className="text-slate-600 text-sm leading-relaxed">{associate.education}</p>
                       </div>
-                    </CardContent>
-                  </Card>
-                </div>
+                      <div className="mb-6 flex-grow">
+                        <h4 className="font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                          <Award className="w-4 h-4 text-slate-600" />
+                          Experiência
+                        </h4>
+                        <p className="text-slate-600 text-sm leading-relaxed mb-4">{associate.experience}</p>
+                        <ul className="space-y-1">
+                          {associate.achievements.map((achievement, achIndex) => (
+                            <li key={achIndex} className="flex items-start gap-2 text-slate-600">
+                              <CheckCircle className="w-3 h-3 text-slate-600 mt-1 flex-shrink-0" />
+                              <span className="text-xs">{achievement}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="mt-auto pt-4">
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="w-full border-slate-300 text-slate-700 hover:bg-slate-50 transition-all duration-300"
+                      >
+                        <Link href="/contato" className="flex items-center justify-center gap-2">
+                          Entrar em Contato
+                          <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </Link>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
-            </Flickity>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8 w-full max-w-4xl mx-auto mt-8">
+              {associates.slice(2, 4).map((associate, index) => (
+                <Card
+                  key={index + 2}
+                  className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-slide-up group overflow-hidden"
+                  style={{ animationDelay: `${associate.delay}s` }}
+                >
+                  <CardContent className="p-8 flex flex-col h-full">
+                    <div className="text-center mb-6">
+                      <div className="w-52 h-52 mx-auto mb-4 relative overflow-hidden flex items-center justify-center bg-slate-200 rounded-2xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <Image
+                          src={associate.imageUrl || "/images/placeholder-avatar.webp"}
+                          alt={`Foto de ${associate.name}`}
+                          fill
+                          style={{
+                            objectFit: "cover",
+                            objectPosition: "top center", // Foca mais no topo para evitar cortes no rosto
+                          }}
+                          className="rounded-2xl"
+                        />
+                      </div>
+                      <h3 className="text-xl font-motiva font-bold text-slate-900 mb-2">{associate.name}</h3>
+                      <p className="text-slate-600 font-medium mb-4">{associate.role}</p>
+                    </div>
+                    <div className="flex-grow">
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                          <Target className="w-4 h-4 text-slate-600" />
+                          Especialidades
+                        </h4>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {associate.specialties.map((specialty, specIndex) => (
+                            <span
+                              key={specIndex}
+                              className="bg-slate-100 text-slate-800 px-3 py-1 rounded-full text-sm font-medium"
+                            >
+                              {specialty}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                          <GraduationCap className="w-4 h-4 text-slate-600" />
+                          Formação
+                        </h4>
+                        <p className="text-slate-600 text-sm leading-relaxed">{associate.education}</p>
+                      </div>
+                      <div className="mb-6 flex-grow">
+                        <h4 className="font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                          <Award className="w-4 h-4 text-slate-600" />
+                          Experiência
+                        </h4>
+                        <p className="text-slate-600 text-sm leading-relaxed mb-4">{associate.experience}</p>
+                        <ul className="space-y-1">
+                          {associate.achievements.map((achievement, achIndex) => (
+                            <li key={achIndex} className="flex items-start gap-2 text-slate-600">
+                              <CheckCircle className="w-3 h-3 text-slate-600 mt-1 flex-shrink-0" />
+                              <span className="text-xs">{achievement}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="mt-auto pt-4">
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="w-full border-slate-300 text-slate-700 hover:bg-slate-50 transition-all duration-300"
+                      >
+                        <Link href="/contato" className="flex items-center justify-center gap-2">
+                          Entrar em Contato
+                          <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </Link>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -415,11 +474,11 @@ export default function EquipePage() {
           <div className="max-w-5xl mx-auto">
             <div className="relative group">
               {/* Main Image Container */}
-              <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:scale-[1.02]">
+              <div className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:scale-[1.02]">
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 via-transparent to-slate-900/40 z-10"></div>
                 <Image
-                  src="/images/unidos.webp"
+                  src="/images/unidos.webp" // Certifique-se que este é o caminho correto para sua imagem
                   alt="Foto da equipe completa do escritório Theodoro & Melo"
                   layout="fill"
                   objectFit="cover"
@@ -450,17 +509,6 @@ export default function EquipePage() {
       {/* Fim da Seção Foto da Equipe Completa */}
 
       <Footer />
-
-      <style jsx global>{`
-        /* Flickity custom pagination style */
-        .flickity-page-dots .dot {
-          background: rgb(71 85 105);
-          opacity: 0.3;
-        }
-        .flickity-page-dots .dot.is-selected {
-          opacity: 1;
-        }
-      `}</style>
     </div>
   )
 }
