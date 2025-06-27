@@ -203,7 +203,7 @@ export default function RecuperacoesPage() {
                     <ul className="space-y-2 text-left">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start gap-2 text-slate-600 text-sm">
-                          <CheckCircle className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "#F1AF09" }} />
+                          <CheckCircle className="w-4 h-4 mt-0.5 flex-shrink-0 text-slate-600" />
                           <span>{feature}</span>
                         </li>
                       ))}

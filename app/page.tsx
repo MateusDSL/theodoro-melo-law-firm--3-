@@ -152,7 +152,7 @@ export default function HomePage() {
                   <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg z-20">
                     <div className="flex items-center gap-2">
                       <Award className="w-4 h-4 text-slate-600" />
-                      <span className="text-sm font-medium text-slate-800">21 Anos</span>
+                      <span className="text-sm font-medium text-slate-800">15 Anos</span>
                     </div>
                   </div>
                 </div>
@@ -179,7 +179,7 @@ export default function HomePage() {
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed mb-8">
                 <p className="relative pl-6">
                   <span className="absolute left-0 top-2 w-2 h-2 bg-slate-500 rounded-full"></span>
-                  Há <strong className="text-slate-800">21 anos</strong> defendemos e representamos pessoas e empresas
+                  Há <strong className="text-slate-800">15 anos</strong> defendemos e representamos pessoas e empresas
                   no âmbito judicial e extrajudicial em questões relacionadas ao direito empresarial, trabalhista,
                   previdenciário, familiar, sucessório e consumerista.
                 </p>
@@ -249,18 +249,18 @@ export default function HomePage() {
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-3 gap-12 items-center">
+          <div className="grid lg:grid-cols-3 gap-12 items-start"> {/* Changed from items-center */}
             {/* FAQ Section */}
-            <div className="space-y-8 min-h-[600px]">
+            <div className="space-y-8 min-h-[600px] relative z-20"> {/* Added z-20 */}
               <div className="space-y-4">
                 <h2 className="text-3xl lg:text-4xl font-bold text-[#09303B]">Por que escolher nossa <span className="text-[#f1af09]">assessoria jurídica</span>?</h2>
                 <p className="text-[#09303B]/80 leading-relaxed">
-                  Oferecemos soluções jurídicas personalizadas com mais de 21 anos de experiência, sempre focando na excelência e nos resultados para nossos clientes.
+                  Oferecemos soluções jurídicas personalizadas com mais de 15 anos de experiência, sempre focando na excelência e nos resultados para nossos clientes.
                 </p>
               </div>
 
               <div className="space-y-4 max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#09303B]/10 scrollbar-track-transparent">
-                <details className="group border border-[#09303B]/20 rounded-lg bg-white/80">
+                <details className="group border border-[#09303B]/20 rounded-lg bg-white/80 [&[open]~div.center-image]:order-1"> {/* Added order class */}
                   <summary className="flex items-center justify-between p-4 cursor-pointer text-[#09303B] hover:bg-[#09303B]/5 transition-all">
                     <span className="font-medium">Atendimento Personalizado</span>
                     <div className="w-6 h-6 flex items-center justify-center">
@@ -282,7 +282,7 @@ export default function HomePage() {
                     </div>
                   </summary>
                   <div className="p-4 pt-0 text-[#09303B]/80">
-                    Mais de 21 anos de atuação no mercado jurídico, com centenas de casos resolvidos com sucesso em diversas áreas do direito.
+                    Há 15 anos de atuação no mercado jurídico, com centenas de casos resolvidos com sucesso em diversas áreas do direito.
                   </div>
                 </details>
 
@@ -313,7 +313,7 @@ export default function HomePage() {
             </div>
 
             {/* Center Image */}
-            <div className="relative">
+            <div className="relative -mt-20 lg:mt-0 center-image"> {/* Added center-image class */}
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
                 <Image
                   src="/images/jus.webp"
@@ -378,7 +378,7 @@ export default function HomePage() {
                   <div className="text-[#09303B]/70 text-sm">Clientes Atendidos</div>
                 </div>
                 <div className="bg-[#09303B]/5 rounded-lg p-4 text-center border border-[#09303B]/10">
-                  <div className="text-2xl font-bold text-[#09303B]">21+</div>
+                  <div className="text-2xl font-bold text-[#09303B]">15+</div>
                   <div className="text-[#09303B]/70 text-sm">Anos de Experiência</div>
                 </div>
               </div>
@@ -535,15 +535,15 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-16">
             {[
-              { icon: Award, value: "21+", label: "Anos de Experiência" },
+              { icon: Award, value: "15+", label: "Anos de Experiência" },
               { icon: Users, value: "500+", label: "Clientes Atendidos" },
               { icon: Scale, value: "8", label: "Áreas de Atuação" },
               { icon: Target, value: "100%", label: "Dedicação" },
             ].map((stat, index) => (
               <div key={index} className="text-center flex"> {/* Adicionado flex para garantir altura igual se necessário */}
                 <div className="relative group w-full h-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-xl transform transition-all duration-300 group-hover:scale-105 opacity-0 group-hover:opacity-100"></div>
-                  <div className="relative bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 md:p-8 transform transition-all duration-500 group-hover:translate-y-[-5px] group-hover:shadow-lg group-hover:shadow-white/10 h-full flex flex-col justify-center"> {/* Adicionado h-full e flex utils */}
+                  {/* Removed hover effect div */}
+                  <div className="relative bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 md:p-8 h-full flex flex-col justify-center"> {/* Removed transform and hover effects */}
                     <div className="mb-4">
                       <stat.icon className="w-10 h-10 sm:w-12 sm:h-12 text-slate-100 mx-auto" />
                     </div>
@@ -625,16 +625,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-50"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-slate-100 rounded-full filter
-          "></div>
-        </div>
-      </section>
-      {/* End CTA Section */}
       <Footer />
       <WhatsAppLeadCapture />
     </div>

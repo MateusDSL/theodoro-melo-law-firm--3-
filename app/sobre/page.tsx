@@ -86,7 +86,7 @@ export default function SobrePage() {
                   </p>
                   <p className="relative pl-6">
                     <span className="absolute left-0 top-2 w-2 h-2 bg-slate-500 rounded-full"></span>
-                    Ao longo desses <strong className="text-slate-800">21 anos</strong> de história, expandimos nossas
+                    Ao longo desses <strong className="text-slate-800">15 anos</strong> de história, expandimos nossas
                     áreas de atuação e consolidamos nossa posição como referência no mercado jurídico, sempre mantendo o
                     compromisso com a qualidade e a personalização do atendimento.
                   </p>
@@ -113,7 +113,7 @@ export default function SobrePage() {
                 <div className="relative">
                   <div className="grid grid-cols-2 gap-8 text-center">
                     {[
-                      { value: "21", label: "Anos de Experiência", delay: 0.2, color: "slate" },
+                      { value: "15", label: "Anos de Experiência", delay: 0.2, color: "slate" },
                       { value: "500+", label: "Clientes Atendidos", delay: 0.4, color: "slate" },
                       { value: "6", label: "Áreas de Atuação", delay: 0.6, color: "slate" },
                       { value: "100%", label: "Dedicação", delay: 0.8, color: "slate" },

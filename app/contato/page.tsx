@@ -63,29 +63,6 @@ export default function ContatoPage() {
     },
   ]
 
-  const faqs = [
-    {
-      question: "Como funciona a primeira consulta?",
-      answer:
-        "A primeira consulta é gratuita e tem duração de 30 minutos. Nela, analisamos seu caso, esclarecemos suas dúvidas e apresentamos as melhores estratégias jurídicas para sua situação específica.",
-    },
-    {
-      question: "Vocês atendem em todo o Brasil?",
-      answer:
-        "Sim, embora nossa sede seja em Lages/SC, atendemos clientes em todo o território nacional, utilizando tecnologia avançada para facilitar o acompanhamento dos casos e garantir comunicação eficiente.",
-    },
-    {
-      question: "Qual o prazo para resposta?",
-      answer:
-        "Respondemos todas as solicitações em até 24 horas úteis. Em casos de urgência, oferecemos atendimento emergencial 24 horas para questões que demandam ação imediata.",
-    },
-    {
-      question: "Como são definidos os honorários?",
-      answer:
-        "Os honorários são definidos de acordo com a complexidade do caso, sempre de forma transparente e com contrato claro antes do início dos trabalhos. Oferecemos diferentes modalidades de cobrança conforme a necessidade do cliente.",
-    },
-  ]
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -107,9 +84,12 @@ export default function ContatoPage() {
               Fale Conosco
             </div>
             <h1 className="text-4xl lg:text-6xl font-motiva font-bold text-white mb-6 animate-fade-in [animation-delay:0.2s] [animation-fill-mode:backwards]">
-              Entre em <span className="text-slate-300">Contato</span>
+              Entre em <span style={{ color: "#F1AF09" }}>Contato</span>
             </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-slate-400 to-slate-500 mx-auto mb-8 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]"></div>
+            <div
+              className="w-24 h-1 mx-auto mb-8 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]"
+              style={{ background: "#F1AF09" }}
+            ></div>
             <p className="text-xl text-white/80 leading-relaxed animate-fade-in [animation-delay:0.4s] [animation-fill-mode:backwards]">
               Estamos prontos para ouvir você e oferecer a melhor solução jurídica para suas necessidades específicas
             </p>
@@ -135,9 +115,12 @@ export default function ContatoPage() {
                   Solicite uma Consulta
                 </div>
                 <h2 className="text-3xl lg:text-4xl font-motiva font-bold text-slate-900 mb-6">
-                  Vamos Conversar Sobre Seu <span className="text-slate-600">Caso</span>
+                  Vamos Conversar Sobre Seu <span style={{ color: "#F1AF09" }}>Caso</span>
                 </h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-slate-500 to-slate-600 mb-8"></div>
+                <div
+                  className="w-16 h-1 bg-gradient-to-r mb-8"
+                  style={{ background: "#F1AF09" }}
+                ></div>
                 <p className="text-lg text-slate-600 leading-relaxed">
                   Preencha o formulário abaixo e nossa equipe entrará em contato em até 24 horas para agendar sua
                   consulta gratuita e personalizada.
@@ -228,9 +211,12 @@ export default function ContatoPage() {
                   Informações de Contato
                 </div>
                 <h2 className="text-3xl lg:text-4xl font-motiva font-bold text-slate-900 mb-6">
-                  Fale <span className="text-slate-600">Diretamente</span> Conosco
+                  Fale <span style={{ color: "#F1AF09" }}>Diretamente</span> Conosco
                 </h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-slate-500 to-slate-600 mb-8"></div>
+                <div
+                  className="w-16 h-1 mb-8"
+                  style={{ background: "#F1AF09" }}
+                ></div>
               </div>
 
               <div className="space-y-6 mb-8">
@@ -243,7 +229,8 @@ export default function ContatoPage() {
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
                         <div
-                          className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                          className={`w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                          style={{ background: "#F1AF09" }}
                         >
                           <item.icon className="w-6 h-6 text-white" />
                         </div>
@@ -275,48 +262,6 @@ export default function ContatoPage() {
                 </CardContent>
               </Card>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-12 lg:py-16 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-slate-100 rounded-full filter blur-3xl opacity-30 translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-100 rounded-full filter blur-3xl opacity-30 -translate-x-1/2 translate-y-1/2"></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-slate-100 text-slate-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <CheckCircle className="w-4 h-4" />
-              Dúvidas Frequentes
-            </div>
-            <h2 className="text-3xl lg:text-4xl font-motiva font-bold text-slate-900 mb-4">
-              Perguntas <span className="text-slate-600">Frequentes</span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-slate-500 to-slate-600 mx-auto mb-8"></div>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Esclarecemos as principais dúvidas sobre nossos serviços e processos
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto space-y-6">
-            {faqs.map((faq, index) => (
-              <Card
-                key={index}
-                className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in [animation-fill-mode:backwards] group overflow-hidden"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-motiva font-semibold text-slate-900 mb-4 transition-colors duration-300 group-hover:text-slate-600">
-                    {faq.question}
-                  </h3>
-                  <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
