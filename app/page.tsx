@@ -316,7 +316,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
                 <Image
-                  src="/images/jus.jpg"
+                  src="/images/jus.webp"
                   alt="Tribunal - Justiça"
                   width={600}
                   height={750}
@@ -411,42 +411,42 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                image: "/images/direito-empresarial.jpg",
+                image: "/images/direito-empresarial.webp",
                 title: "Direito Empresarial",
                 description:
                   "Consultoria completa para empresas, desde a constituição até questões contratuais complexas e planejamento societário.",
                 color: "from-slate-700 to-slate-800",
               },
               {
-                image: "/images/recuperacao.jpg",
+                image: "/images/recuperacao.webp",
                 title: "Recuperação Judicial",
                 description:
                   "Especialização em processos de recuperação judicial e extrajudicial para empresas em dificuldades financeiras.",
                 color: "from-slate-700 to-slate-800",
               },
               {
-                image: "/images/familia.jpg",
+                image: "/images/familia.webp",
                 title: "Direito de Família",
                 description:
                   "Acompanhamento sensível e eficaz em questões familiares delicadas, com abordagem humanizada.",
                 color: "from-slate-700 to-slate-800",
               },
               {
-                image: "/images/inventario.jpg",
+                image: "/images/inventario.webp",
                 title: "Inventários",
                 description:
                   "Condução especializada de processos de inventário e questões sucessórias, protegendo o patrimônio familiar.",
                 color: "from-slate-700 to-slate-800",
               },
               {
-                image: "/images/contrato.jpg",
+                image: "/images/contrato.webp",
                 title: "Contratos",
                 description:
                   "Elaboração, análise e negociação de contratos diversos, garantindo segurança jurídica e proteção dos interesses.",
                 color: "from-slate-700 to-slate-800",
               },
               {
-                image: "/images/indenizacao.jpg",
+                image: "/images/indenizacao.webp",
                 title: "Demandas Indenizatórias",
                 description:
                   "Representação especializada em ações indenizatórias, buscando a reparação justa por danos morais e materiais.",

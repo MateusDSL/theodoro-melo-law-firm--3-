@@ -29,7 +29,7 @@ export default function EquipePage() {
         "Autor de artigos especializados em compliance",
       ],
       email: "brian@theodoromelo.adv.br",
-      imageUrl: "/images/theodoro.jpg",
+      imageUrl: "/images/theodoro.webp ",
       delay: 0,
     },
     {
@@ -50,7 +50,7 @@ export default function EquipePage() {
         "Especialista em planejamento sucessório",
       ],
       email: "vitor@theodoromelo.adv.br",
-      imageUrl: "/images/melo.jpg",
+      imageUrl: "/images/melo.webp",
       delay: 0.3,
     },
   ]
@@ -67,7 +67,7 @@ export default function EquipePage() {
         "Especialista em mediação e arbitragem"
       ],
       delay: 0.4,
-      imageUrl: "/images/daniele.jpg",
+      imageUrl: "/images/daniele.webp",
     },
     {
       name: "Alessandra Aparecida Bittencourt",
@@ -78,7 +78,7 @@ export default function EquipePage() {
         "Especialista em Direito Civil e Trabalhista, com vasta experiência em consultoria jurídica e acompanhamento processual completo.",
       achievements: ["Pós-graduada em Direito Civil", "Experiência em grandes escritórios"],
       delay: 0.6,
-      imageUrl: "/images/alessandra1.jpg",
+      imageUrl: "/images/alessandra.webp",
     },
     {
       name: "Nicolas Rodrigues Ronsoni",
@@ -89,7 +89,7 @@ export default function EquipePage() {
         "Bacharel em Direito com foco em pesquisa jurídica e suporte processual, oferecendo apoio técnico especializado.",
       achievements: ["Pós-graduando em Direito Civil", "Especialista em pesquisa jurídica"],
       delay: 0.8,
-      imageUrl: "/images/nicolas.jpg",
+      imageUrl: "/images/nicolas.webp",
     },
     {
       name: "Vanessa Concer",
@@ -100,7 +100,7 @@ export default function EquipePage() {
         "Profissional com formação em Jornalismo, responsável pela gestão administrativa e atendimento personalizado aos clientes.",
       achievements: ["Formada em Jornalismo", "Especialista em atendimento ao cliente"],
       delay: 1.0,
-      imageUrl: "/images/concer.jpg",
+      imageUrl: "/images/concer.webp",
     },
   ]
 
@@ -300,12 +300,12 @@ export default function EquipePage() {
             </p>
           </div>
           {/* Carrossel horizontal para os cards */}
-          <div className="carousel-wrapper w-full relative">
+          <div className="relative max-w-7xl mx-auto">
             <Flickity
-              className={'main-carousel !pb-12'} // aplica o padding-left para alinhar com o container
-              elementType={'div'}
+              className={'carousel !pb-12'} // default ''
+              elementType={'div'} // default 'div'
               options={flickityOptions}
-              disableImagesLoaded={false}
+              disableImagesLoaded={false} // default false
               reloadOnUpdate
               static
             >
@@ -419,7 +419,7 @@ export default function EquipePage() {
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 via-transparent to-slate-900/40 z-10"></div>
                 <Image
-                  src="/images/unidos.jpg"
+                  src="/images/unidos.webp"
                   alt="Foto da equipe completa do escritório Theodoro & Melo"
                   layout="fill"
                   objectFit="cover"
@@ -459,20 +459,6 @@ export default function EquipePage() {
         }
         .flickity-page-dots .dot.is-selected {
           opacity: 1;
-        }
-        /* Container padrão para o seu conteúdo de texto */
-        .container {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-        }
-        /* O wrapper do carrossel não tem limitação de largura */
-        .carousel-wrapper {
-          width: 100%;
-        }
-        /* Para o Flickity dentro do wrapper, alinhe o conteúdo com o container principal */
-        .main-carousel {
-          padding-left: calc((100vw - 1200px) / 2);
         }
       `}</style>
     </div>
