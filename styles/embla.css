@@ -1,0 +1,103 @@
+.embla {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.embla__container {
+  display: flex;
+  backface-visibility: hidden;
+  touch-action: pan-y;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  position: relative;
+  padding: 0 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .embla__slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .embla {
+    padding: 0;
+  }
+  
+  .embla__slide {
+    flex: 0 0 33.333%;
+  }
+}
+
+/* Smooth transitions */
+.embla__slide > * {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Navigation buttons */
+.embla__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.embla__button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.embla__button--prev {
+  left: 0.5rem;
+}
+
+.embla__button--next {
+  right: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .embla__button--prev {
+    left: 1rem;
+  }
+  
+  .embla__button--next {
+    right: 1rem;
+  }
+}
+
+/* Pagination dots */
+.embla__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.embla__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+  transition: all 0.3s ease;
+}
+
+.embla__dot--selected {
+  width: 1rem;
+  background-color: #475569;
+}
