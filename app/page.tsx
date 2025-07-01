@@ -488,15 +488,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Nossa Trajetória */}
+      {/* Nossa Trajetória - HIDDEN */}
+      {/* 
       <section className="py-12 relative overflow-hidden bg-[#0b3a48] text-white">
-        {/* Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 bg-slate-700 rounded-full filter blur-3xl opacity-20"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-700 rounded-full filter blur-3xl opacity-20"></div>
         </div>
 
-        {/* Subtle Pattern */}
         <div className="absolute inset-0 bg-grid-slate/[0.03] bg-[length:20px_20px]"></div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -512,10 +511,9 @@ export default function HomePage() {
               { icon: Scale, value: "10+", label: "Áreas de Atuação" },
               { icon: Target, value: "100%", label: "Dedicação" },
             ].map((stat, index) => (
-              <div key={index} className="text-center flex"> {/* Adicionado flex para garantir altura igual se necessário */}
+              <div key={index} className="text-center flex">
                 <div className="relative group w-full h-full">
-                  {/* Removed hover effect div */}
-                  <div className="relative bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 md:p-8 h-full flex flex-col justify-center"> {/* Removed transform and hover effects */}
+                  <div className="relative bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 md:p-8 h-full flex flex-col justify-center">
                     <div className="mb-4">
                       <stat.icon className="w-10 h-10 sm:w-12 sm:h-12 text-slate-100 mx-auto" />
                     </div>
@@ -530,6 +528,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Seção Como Trabalhamos */}
       <section className="py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
