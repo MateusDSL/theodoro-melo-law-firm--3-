@@ -2,13 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Cinzel', Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .title-main {
+    font-family: 'Cinzel', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 2rem; /* Ajuste conforme necessário */
+    color: hsl(var(--foreground));
   }
 }
 

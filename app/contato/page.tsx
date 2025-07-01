@@ -83,14 +83,14 @@ export default function ContatoPage() {
               <MessageCircle className="w-4 h-4" />
               Fale Conosco
             </div>
-            <h1 className="text-4xl lg:text-6xl font-motiva font-bold text-white mb-6 animate-fade-in [animation-delay:0.2s] [animation-fill-mode:backwards]">
+            <h1 className="text-4xl lg:text-6xl font-motiva font-bold text-white mb-6 font-cinzel">
               Entre em <span style={{ color: "#F1AF09" }}>Contato</span>
             </h1>
             <div
-              className="w-24 h-1 mx-auto mb-8 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]"
+              className="w-24 h-1 mx-auto mb-8"
               style={{ background: "#F1AF09" }}
             ></div>
-            <p className="text-xl text-white/80 leading-relaxed animate-fade-in [animation-delay:0.4s] [animation-fill-mode:backwards]">
+            <p className="text-xl text-white/80 leading-relaxed">
               Estamos prontos para ouvir você e oferecer a melhor solução jurídica para suas necessidades específicas
             </p>
           </div>
@@ -114,7 +114,7 @@ export default function ContatoPage() {
                   <Target className="w-4 h-4" />
                   Solicite uma Consulta
                 </div>
-                <h2 className="text-3xl lg:text-4xl font-motiva font-bold text-slate-900 mb-6">
+                <h2 className="text-3xl lg:text-4xl font-motiva font-bold text-slate-900 mb-6 font-cinzel">
                   Vamos Conversar Sobre Seu <span style={{ color: "#F1AF09" }}>Caso</span>
                 </h2>
                 <div
@@ -210,7 +210,7 @@ export default function ContatoPage() {
                   <Phone className="w-4 h-4" />
                   Informações de Contato
                 </div>
-                <h2 className="text-3xl lg:text-4xl font-motiva font-bold text-slate-900 mb-6">
+                <h2 className="text-3xl lg:text-4xl font-motiva font-bold text-slate-900 mb-6 font-cinzel">
                   Fale <span style={{ color: "#F1AF09" }}>Diretamente</span> Conosco
                 </h2>
                 <div
@@ -223,8 +223,7 @@ export default function ContatoPage() {
                 {contactInfo.map((item, index) => (
                   <Card
                     key={index}
-                    className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in [animation-fill-mode:backwards] group overflow-hidden"
-                    style={{ animationDelay: `${index * 0.1 + 0.4}s` }}
+                    className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 group overflow-hidden"
                   >
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">

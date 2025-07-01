@@ -125,14 +125,14 @@ export default function RecuperacoesPage() {
               <Building2 className="w-4 h-4" />
               Especialização Empresarial
             </div>
-            <h1 className="text-4xl lg:text-6xl font-motiva font-bold text-white mb-6 animate-fade-in [animation-delay:0.2s] [animation-fill-mode:backwards]">
+            <h1 className="text-4xl lg:text-6xl font-motiva font-bold text-white mb-6 font-cinzel">
               Recuperações e <span style={{ color: "#F1AF09" }}>Falências</span>
             </h1>
             <div
-              className="w-24 h-1 mx-auto mb-8 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]"
+              className="w-24 h-1 mx-auto mb-8"
               style={{ background: "#F1AF09" }}
             ></div>
-            <p className="text-xl text-white/80 leading-relaxed animate-fade-in [animation-delay:0.4s] [animation-fill-mode:backwards]">
+            <p className="text-xl text-white/80 leading-relaxed">
               Especialistas em recuperação judicial, extrajudicial e processos falimentares com soluções estratégicas
               para empresas em dificuldades financeiras
             </p>
@@ -151,10 +151,10 @@ export default function RecuperacoesPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-slate-100 text-slate-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Target className="w-4 h-4" />
+              <Target className="w-4 h-4 text-slate-700" />
               Nossos Serviços
             </div>
-            <h2 className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4 font-cinzel">
               Soluções <span style={{ color: "#F1AF09" }}>Especializadas</span>
             </h2>
             <div
@@ -171,8 +171,7 @@ export default function RecuperacoesPage() {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in [animation-fill-mode:backwards] group overflow-hidden"
-                style={{ animationDelay: `${service.delay}s` }}
+                className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105"
               >
                 <CardContent className="p-8 text-center relative">
                   {/* Gradient Background */}
@@ -212,6 +211,34 @@ export default function RecuperacoesPage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className="mt-16 text-center">
+            <h2 className="text-2xl lg:text-4xl font-motiva font-bold text-slate-900 mb-4 font-cinzel">
+              Pronto para Transformar sua Empresa?
+            </h2>
+            <p className="text-lg text-slate-600 mb-8">
+              Entre em contato conosco e descubra como podemos ajudar na recuperação e fortalecimento do seu negócio.
+            </p>
+            <div className="inline-flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                asChild
+                className="bg-[#0b3a48] hover:bg-[#1a4a60] text-white transition-all duration-300 px-6 py-3 rounded-xl shadow-lg hover:shadow-xl"
+              >
+                <Link href="/contato" className="flex items-center justify-center gap-2">
+                  Consultar Especialista
+                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 text-white" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="border-slate-300 text-slate-700 hover:bg-slate-50 transition-all duration-300 px-6 py-3 rounded-xl"
+              >
+                <Link href="/equipe">Conhecer a Equipe</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

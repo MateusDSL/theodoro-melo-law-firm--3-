@@ -376,8 +376,14 @@ export default function HomePage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-motiva font-bold text-[#09303B] mb-6 leading-tight">Áreas de <span className="text-[#f1af09]">Atuação</span></h2>
+            <h2 className="text-4xl lg:text-5xl font-motiva font-bold text-[#09303B] mb-6 leading-tight font-cinzel">
+              Áreas de <span className="text-[#f1af09]">Atuação</span>
+            </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#f1af09] to-[#f1af09]/60 mx-auto mb-6"></div>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Oferecemos assessoria completa em processos de recuperação e falência com abordagem estratégica e
+              personalizada
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -488,19 +494,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Nossa Trajetória - HIDDEN */}
-      {/* 
+      {/* Nossa Trajetória */}
       <section className="py-12 relative overflow-hidden bg-[#0b3a48] text-white">
+        {/* Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 bg-slate-700 rounded-full filter blur-3xl opacity-20"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-700 rounded-full filter blur-3xl opacity-20"></div>
         </div>
 
+        {/* Subtle Pattern */}
         <div className="absolute inset-0 bg-grid-slate/[0.03] bg-[length:20px_20px]"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-motiva font-bold mb-6 leading-tight">Nossa <span className="text-[#f1af09]">Trajetória</span></h2>
+            <h2 className="text-4xl lg:text-5xl font-motiva font-bold mb-6 leading-tight font-cinzel">Nossa <span className="text-[#f1af09]">Trajetória</span></h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#f1af09] to-white/60 mx-auto mb-6"></div>
           </div>
 
@@ -511,9 +518,10 @@ export default function HomePage() {
               { icon: Scale, value: "10+", label: "Áreas de Atuação" },
               { icon: Target, value: "100%", label: "Dedicação" },
             ].map((stat, index) => (
-              <div key={index} className="text-center flex">
+              <div key={index} className="text-center flex"> {/* Adicionado flex para garantir altura igual se necessário */}
                 <div className="relative group w-full h-full">
-                  <div className="relative bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 md:p-8 h-full flex flex-col justify-center">
+                  {/* Removed hover effect div */}
+                  <div className="relative bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 md:p-8 h-full flex flex-col justify-center"> {/* Removed transform and hover effects */}
                     <div className="mb-4">
                       <stat.icon className="w-10 h-10 sm:w-12 sm:h-12 text-slate-100 mx-auto" />
                     </div>
@@ -528,7 +536,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      */}
 
       {/* Seção Como Trabalhamos */}
       <section className="py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
@@ -541,7 +548,7 @@ export default function HomePage() {
               <Target className="w-4 h-4" />
               Nossa Metodologia
             </div>
-            <h2 className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4 font-cinzel">
               Como <span className="text-[#f1af09]">Trabalhamos</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#f1af09] to-[#f1af09]/60 mx-auto mb-8"></div>
@@ -554,8 +561,7 @@ export default function HomePage() {
             {processSteps.map((item, index) => (
               <Card
                 key={index}
-                className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in group text-center"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105"
               >
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-gradient-to-br from-[#f1af09] to-[#f1af09]/80 text-white rounded-2xl flex items-center justify-center text-xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">

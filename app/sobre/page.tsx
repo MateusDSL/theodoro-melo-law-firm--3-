@@ -14,33 +14,28 @@ export default function SobrePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-20 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0b3b49] to-black"></div>
         <div className="absolute inset-0 opacity-20 bg-grid-white/[0.2] bg-[length:20px_20px]"></div>
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-slate-700 rounded-full filter blur-3xl opacity-10 -translate-y-1/2 translate-x-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-700 rounded-full filter blur-3xl opacity-10 translate-y-1/2 -translate-x-1/2"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full filter blur-3xl opacity-30 -translate-y-1/2 translate-x-1/2"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full filter blur-3xl opacity-30 translate-y-1/2 -translate-x-1/2"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col items-center text-center">
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
-                <Target className="w-4 h-4" />
-                Nossa História
-              </div>
-              <h1 className="text-4xl lg:text-6xl font-motiva font-bold text-white mb-6 animate-fade-in [animation-delay:0.2s] [animation-fill-mode:backwards]">
-                Sobre <span style={{ color: "#F1AF09" }}>Nós</span>
-              </h1>
-              <div
-                className="w-24 h-1 mb-8 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]"
-                style={{ background: "#F1AF09" }}
-              ></div>
-              <p className="text-xl text-white/80 leading-relaxed max-w-3xl animate-fade-in-left [animation-delay:0.4s] [animation-fill-mode:backwards]">
-                Construindo relacionamentos sólidos e oferecendo soluções jurídicas de excelência há mais de 15 anos
-              </p>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Target className="w-4 h-4" />
+              Nossa História
             </div>
+            <h1 className="text-4xl lg:text-6xl font-motiva font-bold text-white mb-6 font-cinzel">
+              Sobre <span style={{ color: "#F1AF09" }}>Nós</span>
+            </h1>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#f1af09] to-[#f1af09]/60 mx-auto mb-8"></div>
+            <p className="text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
+              Construindo relacionamentos sólidos e oferecendo soluções jurídicas de excelência há mais de 15 anos
+            </p>
           </div>
         </div>
       </section>
@@ -56,13 +51,13 @@ export default function SobrePage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="animate-fade-in">
+              <div>
                 <div className="mb-8">
                   <div className="inline-flex items-center gap-2 bg-slate-100 text-slate-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
                     <Clock className="w-4 h-4" />
                     Nossa Trajetória
                   </div>
-                  <h2 className="text-3xl lg:text-4xl font-motiva font-bold text-slate-900 mb-6 leading-tight">
+                  <h2 className="text-3xl lg:text-4xl font-motiva font-bold text-slate-900 mb-6 leading-tight font-cinzel">
                     Tradição e Inovação <span style={{ color: "#F1AF09" }}>Jurídica</span>
                   </h2>
                   <div
@@ -105,7 +100,7 @@ export default function SobrePage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl shadow-xl relative animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]">
+              <div className="bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl shadow-xl relative">
                 {/* Decorative Elements */}
                 <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-slate-500 to-slate-600 rounded-2xl opacity-10 transform rotate-12"></div>
                 <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-to-br from-slate-400 to-slate-500 rounded-xl opacity-10 transform -rotate-12"></div>
@@ -120,8 +115,7 @@ export default function SobrePage() {
                     ].map((stat, index) => (
                       <div
                         key={index}
-                        className="group bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 hover:scale-105 animate-scale-in [animation-fill-mode:backwards] group overflow-hidden"
-                        style={{ animationDelay: `${stat.delay}s` }}
+                        className="group bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 hover:scale-105"
                       >
                         <div
                           className={`text-3xl font-bold mb-2 bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent animate-pulse-subtle`}
@@ -151,7 +145,7 @@ export default function SobrePage() {
               <Target className="w-4 h-4" />
               Nossos Princípios
             </div>
-            <h2 className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4 font-cinzel">
               Valores que <span style={{ color: "#F1AF09" }}>Nos Definem</span>
             </h2>
             <div
@@ -200,8 +194,7 @@ export default function SobrePage() {
             ].map((item, index) => (
               <Card
                 key={index}
-                className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in"
-                style={{ animationDelay: `${item.delay}s` }}
+                className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105"
               >
                 <CardContent className="p-8 text-center relative">
                   {/* Gradient Background */}

@@ -158,21 +158,21 @@ export default function AreasAtuacaoPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0b3b49] to-black"></div>
         <div className="absolute inset-0 opacity-20 bg-grid-white/[0.2] bg-[length:20px_20px]"></div>
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-slate-500 rounded-full filter blur-3xl opacity-10 -translate-y-1/2 translate-x-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-500 rounded-full filter blur-3xl opacity-10 translate-y-1/2 -translate-x-1/2"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full filter blur-3xl opacity-30 -translate-y-1/2 translate-x-1/2"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full filter blur-3xl opacity-30 translate-y-1/2 -translate-x-1/2"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in [animation-fill-mode:backwards]">
-              <Target className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Target className="w-4 h-4 text-white/90" />
               Nossas Especialidades
             </div>
-            <h1 className="text-4xl lg:text-6xl font-motiva font-bold text-white mb-6 animate-fade-in [animation-delay:0.2s] [animation-fill-mode:backwards]">
-              Áreas de <span className="text-slate-300">Atuação</span>
+            <h1 className="text-4xl lg:text-6xl font-motiva font-bold text-white mb-6 font-cinzel">
+              Áreas de <span className="text-[#f1af09]">Atuação</span>
             </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-slate-400 to-slate-500 mx-auto mb-8 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]"></div>
-            <p className="text-xl text-white/80 leading-relaxed animate-fade-in [animation-delay:0.4s] [animation-fill-mode:backwards]">
+            <div className="w-24 h-1 bg-gradient-to-r from-[#f1af09] to-[#f1af09]/60 mx-auto mb-8"></div>
+            <p className="text-xl text-white/80 leading-relaxed">
               Oferecemos assessoria jurídica especializada em diversas áreas do direito, sempre com foco na excelência e
               nos resultados efetivos para nossos clientes
             </p>
@@ -193,8 +193,7 @@ export default function AreasAtuacaoPage() {
             {areas.map((area, index) => (
               <Card
                 key={index}
-                className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] animate-fade-in [animation-fill-mode:backwards] group overflow-hidden"
-                style={{ animationDelay: `${area.delay}s` }}
+                className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]"
               >
                 <CardContent className="p-0">
                   <div className="grid lg:grid-cols-5 h-full">
@@ -211,25 +210,29 @@ export default function AreasAtuacaoPage() {
                           <area.icon className="w-12 h-12 text-white" />
                         </div>
                       </div>
-
                       <h2 className="text-2xl lg:text-3xl font-motiva font-bold text-white mb-4 text-center">
-                        {area.title}
+                        {area.title.split(" ").map((word, i) =>
+                          i === area.title.split(" ").length - 1 ? (
+                            <span key={i} className="text-[#f1af09]">{word}</span>
+                          ) : (
+                            word + " "
+                          )
+                        )}
                       </h2>
                       <p className="text-white/90 text-center leading-relaxed">{area.description}</p>
                     </div>
-
                     {/* Content Section */}
                     <div className="lg:col-span-3 p-10 flex flex-col">
                       <div className="mb-8">
                         <h3 className="text-xl font-semibold text-slate-900 mb-6 flex items-center gap-2">
-                          <Award className="w-5 h-5 text-slate-600" />
-                          Principais Serviços
+                          <Award className="w-5 h-5 text-[#f1af09]" />
+                          <span className="text-[#f1af09]">Principais Serviços</span>
                         </h3>
                         <div className="grid md:grid-cols-2 gap-4">
                           {area.services.map((service, serviceIndex) => (
                             <div key={serviceIndex} className="flex items-start gap-3 group/item">
-                              <CheckCircle className="w-5 h-5 text-slate-600 mt-0.5 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300" />
-                              <span className="text-slate-600 group-hover/item:text-slate-800 transition-colors duration-300">
+                              <CheckCircle className="w-5 h-5 text-slate-600 mt-0.5 flex-shrink-0 group-hover:item:scale-110 transition-transform duration-300" />
+                              <span className="text-slate-600 group-hover:item:text-slate-800 transition-colors duration-300">
                                 {service}
                               </span>
                             </div>
@@ -244,7 +247,7 @@ export default function AreasAtuacaoPage() {
                         >
                           <Link href="/contato" className="flex items-center justify-center gap-2">
                             Consultar Especialista
-                            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 text-white" />
                           </Link>
                         </Button>
                         <Button

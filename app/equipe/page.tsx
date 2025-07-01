@@ -132,20 +132,18 @@ export default function EquipePage() {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Users className="w-4 h-4" />
               Nossos Profissionais
             </div>
-            <h1
-              className="text-4xl lg:text-6xl font-motiva font-bold text-white mb-6 animate-fade-in [animation-delay:0.2s] [animation-fill-mode:backwards]"
-            >
+            <h1 className="text-4xl lg:text-6xl font-motiva font-bold text-white mb-6 font-cinzel">
               Nossa <span style={{ color: "#F1AF09" }}>Equipe</span>
             </h1>
             <div
-              className="w-24 h-1 mx-auto mb-8 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]"
+              className="w-24 h-1 mx-auto mb-8"
               style={{ background: "#F1AF09" }}
             ></div>
-            <p className="text-xl text-white/80 leading-relaxed animate-fade-in [animation-delay:0.4s] [animation-fill-mode:backwards]">
+            <p className="text-xl text-white/80 leading-relaxed">
               Profissionais experientes e comprometidos com a excelência no atendimento e na busca pelos melhores
               resultados
             </p>
@@ -162,7 +160,7 @@ export default function EquipePage() {
               <Users className="w-4 h-4" />
               Nossa Equipe
             </div>
-            <h2 className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4 font-cinzel">
               Profissionais <span style={{ color: "#F1AF09" }}>Especializados</span>
             </h2>
             <div className="w-24 h-1 mx-auto mb-8" style={{ background: "#F1AF09" }}></div>
@@ -178,8 +176,7 @@ export default function EquipePage() {
               {allTeamMembers.slice(0, 3).map((member, index) => (
                 <Card
                   key={index}
-                  className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-slide-up group overflow-hidden h-full"
-                  style={{ animationDelay: `${member.delay}s` }}
+                  className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 group overflow-hidden h-full"
                 >
                   <CardContent className="p-6 flex flex-col h-full">
                     <div className="text-center mb-4">
@@ -261,8 +258,7 @@ export default function EquipePage() {
               {allTeamMembers.slice(3, 6).map((member, index) => (
                 <Card
                   key={index + 3}
-                  className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-slide-up group overflow-hidden h-full"
-                  style={{ animationDelay: `${member.delay}s` }}
+                  className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 group overflow-hidden h-full"
                 >
                   <CardContent className="p-6 flex flex-col h-full">
                     <div className="text-center mb-4">
@@ -352,7 +348,7 @@ export default function EquipePage() {
               Nossa Força Coletiva
             </div>
             <h2
-              className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4"
+              className="text-3xl lg:text-5xl font-motiva font-bold text-slate-900 mb-4 font-cinzel"
             >
               Nossa Equipe <span style={{ color: "#F1AF09" }}>Unida</span>
             </h2>
